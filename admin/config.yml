@@ -1,0 +1,158 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+site_url: https://magnificent-kitten-72418f.netlify.app
+display_url: https://magnificent-kitten-72418f.netlify.app
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Content"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "data"
+        label: "All Portfolio Content"
+        file: "content/data.json"
+        description: "Everything on your site. Edit a section, then click Publish to save."
+        fields:
+
+          # ---------- PROFILE ----------
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Full name", name: "name", widget: "string" }
+              - { label: "Professional title", name: "title", widget: "string", hint: "Keep this as 'Internal Quality'." }
+              - { label: "Industry", name: "industry", widget: "string" }
+              - { label: "Location (general only)", name: "location", widget: "string", required: false }
+              - { label: "Current company", name: "currentCompany", widget: "string" }
+              - { label: "Current period", name: "currentPeriod", widget: "string" }
+              - { label: "Hero introduction", name: "introduction", widget: "text", hint: "Leave a blank line between paragraphs." }
+
+          # ---------- CONTACT ----------
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+
+          # ---------- ASSETS (portrait + resume) ----------
+          - label: "Portrait & Résumé"
+            name: "assets"
+            widget: "object"
+            fields:
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload a vertical photo (white shirt, white background). Leave empty to show a placeholder." }
+              - { label: "Résumé (PDF)", name: "resume", widget: "file", required: false, hint: "Upload a PDF to show a download link. Leave empty for no résumé button." }
+
+          # ---------- ABOUT ----------
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "About paragraphs", name: "paragraphs", widget: "text", hint: "Leave a blank line between paragraphs." }
+              - label: "At-a-glance facts"
+                name: "facts"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          # ---------- CAREER ----------
+          - label: "Career History"
+            name: "career"
+            widget: "list"
+            label_singular: "Job"
+            summary: "{{fields.period}} — {{fields.title}} ({{fields.company}})"
+            hint: "Most recent job at the top."
+            fields:
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Job title", name: "title", widget: "string" }
+              - { label: "Period", name: "period", widget: "string", hint: "e.g. 2025 – Present" }
+              - { label: "Industry / context", name: "context", widget: "string" }
+              - { label: "Current job?", name: "current", widget: "boolean", default: false }
+              - { label: "Responsibilities", name: "responsibilities", widget: "text", hint: "One per line." }
+
+          # ---------- CONTRIBUTIONS ----------
+          - label: "Contributions"
+            name: "contributions"
+            widget: "list"
+            label_singular: "Contribution"
+            summary: "{{fields.ref}} — {{fields.title}}"
+            fields:
+              - { label: "Reference letter", name: "ref", widget: "string", hint: "e.g. A, B, C" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Context", name: "context", widget: "text", required: false }
+              - { label: "My involvement", name: "involvement", widget: "text", required: false }
+              - { label: "Objective", name: "objective", widget: "text", required: false }
+
+          # ---------- AUDITS ----------
+          - label: "Supplier Audits"
+            name: "audits"
+            widget: "list"
+            label_singular: "Supplier"
+            summary: "{{fields.company}}"
+            hint: "Eight suppliers. Add image and details when confirmed."
+            fields:
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Purpose", name: "purpose", widget: "string", default: "Quality Audit" }
+              - { label: "Company image", name: "image", widget: "image", required: false, hint: "Upload this supplier's own image. Leave empty for placeholder." }
+              - { label: "Location", name: "location", widget: "string", required: false, hint: "Leave empty until confirmed." }
+              - { label: "Audit date", name: "date", widget: "string", required: false }
+              - { label: "Scope", name: "scope", widget: "string", required: false }
+              - { label: "My role", name: "role", widget: "string", required: false }
+              - { label: "Status", name: "status", widget: "string", required: false }
+
+          # ---------- COMPETENCIES ----------
+          - label: "Competencies"
+            name: "competencies"
+            widget: "list"
+            label_singular: "Group"
+            summary: "{{fields.group}}"
+            fields:
+              - { label: "Group name", name: "group", widget: "string" }
+              - { label: "Skills", name: "skills", widget: "text", hint: "One skill per line." }
+
+          # ---------- PROJECTS ----------
+          - label: "Projects"
+            name: "projects"
+            widget: "object"
+            fields:
+              - { label: "Intro text", name: "intro", widget: "text" }
+              - label: "Project items"
+                name: "items"
+                widget: "list"
+                required: false
+                label_singular: "Project"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Context", name: "context", widget: "text", required: false }
+                  - { label: "My contribution", name: "contribution", widget: "text", required: false }
+                  - { label: "Method", name: "method", widget: "text", required: false }
+                  - { label: "Outcome", name: "outcome", widget: "text", required: false }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+
+          # ---------- EDUCATION ----------
+          - label: "Education"
+            name: "education"
+            widget: "object"
+            fields:
+              - { label: "Note (shown if empty)", name: "note", widget: "text" }
+              - label: "Education / certification items"
+                name: "items"
+                widget: "list"
+                required: false
+                label_singular: "Record"
+                summary: "{{fields.qualification}}"
+                fields:
+                  - { label: "Institution / provider", name: "institution", widget: "string" }
+                  - { label: "Qualification / course", name: "qualification", widget: "string" }
+                  - { label: "Completion date", name: "date", widget: "string", required: false }
+                  - { label: "Certification type", name: "type", widget: "string", required: false }
+                  - { label: "Credential link", name: "credentialUrl", widget: "string", required: false }
