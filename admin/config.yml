@@ -97,9 +97,10 @@ collections:
             widget: "list"
             label_singular: "Supplier"
             summary: "{{fields.company}}"
-            hint: "Eight suppliers. Add image and details when confirmed."
+            hint: "Suppliers grouped by country. Add image and details when confirmed."
             fields:
               - { label: "Company", name: "company", widget: "string" }
+              - { label: "Country", name: "country", widget: "select", options: ["Malaysia", "Indonesia"], default: "Malaysia", hint: "Suppliers are grouped under this country heading." }
               - { label: "Purpose", name: "purpose", widget: "string", default: "Quality Audit" }
               - { label: "Company image", name: "image", widget: "image", required: false, hint: "Upload this supplier's own image. Leave empty for placeholder." }
               - { label: "Location", name: "location", widget: "string", required: false, hint: "Leave empty until confirmed." }

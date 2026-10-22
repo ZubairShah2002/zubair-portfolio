@@ -162,31 +162,67 @@
     const count = $("[data-role='audits-count']");
     grid.innerHTML = ""; list.innerHTML = "";
     const audits = C.audits || [];
-    count.textContent = audits.length + " suppliers · Quality Audit";
 
-    audits.forEach((a, i) => {
-      const no = String(i + 1).padStart(2, "0");
+    // Assign a stable global number to each supplier, then group by country.
+    audits.forEach((a, i) => { a._no = String(i + 1).padStart(2, "0"); });
 
-      const card = el("button", "audit-card");
-      card.type = "button";
-      card.setAttribute("aria-label", "View details for " + a.company);
-      const frame = el("div", "audit-card__frame");
-      frame.appendChild(el("span", "audit-card__no", no));
-      fillFrame(frame, a.image, a.company + " — supplier image");
-      card.appendChild(frame);
-      card.appendChild(el("div", "audit-card__name", esc(a.company)));
-      card.appendChild(el("div", "audit-card__purpose", esc(a.purpose || "Quality Audit")));
-      card.addEventListener("click", () => openAudit(a, no));
-      grid.appendChild(el("div", "reveal")).appendChild(card);
+    // Preserve first-seen country order.
+    const order = [];
+    const groups = {};
+    audits.forEach((a) => {
+      const c = (a.country && a.country.trim()) ? a.country.trim() : "Other";
+      if (!groups[c]) { groups[c] = []; order.push(c); }
+      groups[c].push(a);
+    });
 
-      const row = el("button", "audit-row");
-      row.type = "button";
-      row.setAttribute("aria-label", "View details for " + a.company);
-      row.appendChild(el("span", "audit-row__no", no));
-      row.appendChild(el("span", "audit-row__name", esc(a.company)));
-      row.appendChild(el("span", "audit-row__meta", esc(a.purpose || "Quality Audit")));
-      row.addEventListener("click", () => openAudit(a, no));
-      list.appendChild(row);
+    // Count summary: "9 suppliers · Malaysia and Indonesia"
+    const countryList = order.length > 1
+      ? order.slice(0, -1).join(", ") + " and " + order[order.length - 1]
+      : order[0] || "";
+    count.textContent = audits.length + " suppliers · " + countryList;
+
+    order.forEach((country) => {
+      const items = groups[country];
+
+      // --- Gallery group ---
+      const gHead = el("div", "audits__group-head");
+      gHead.appendChild(el("span", "audits__group-name", esc(country)));
+      gHead.appendChild(el("span", "audits__group-count", items.length + (items.length > 1 ? " suppliers" : " supplier")));
+      grid.appendChild(gHead);
+
+      const gWrap = el("div", "audits__grid-inner");
+      items.forEach((a) => {
+        const no = a._no;
+        const card = el("button", "audit-card");
+        card.type = "button";
+        card.setAttribute("aria-label", "View details for " + a.company);
+        const frame = el("div", "audit-card__frame");
+        frame.appendChild(el("span", "audit-card__no", no));
+        fillFrame(frame, a.image, a.company + " — supplier image");
+        card.appendChild(frame);
+        card.appendChild(el("div", "audit-card__name", esc(a.company)));
+        card.appendChild(el("div", "audit-card__purpose", esc(a.purpose || "Quality Audit")));
+        card.addEventListener("click", () => openAudit(a, no));
+        gWrap.appendChild(el("div", "reveal")).appendChild(card);
+      });
+      grid.appendChild(gWrap);
+
+      // --- Register group ---
+      const lHead = el("div", "audits__group-head audits__group-head--list");
+      lHead.appendChild(el("span", "audits__group-name", esc(country)));
+      lHead.appendChild(el("span", "audits__group-count", items.length + (items.length > 1 ? " suppliers" : " supplier")));
+      list.appendChild(lHead);
+
+      items.forEach((a) => {
+        const row = el("button", "audit-row");
+        row.type = "button";
+        row.setAttribute("aria-label", "View details for " + a.company);
+        row.appendChild(el("span", "audit-row__no", a._no));
+        row.appendChild(el("span", "audit-row__name", esc(a.company)));
+        row.appendChild(el("span", "audit-row__meta", esc(a.purpose || "Quality Audit")));
+        row.addEventListener("click", () => openAudit(a, a._no));
+        list.appendChild(row);
+      });
     });
 
     $$(".viewbtn").forEach((btn) => {
@@ -223,6 +259,7 @@
 
     const fields = el("div", "dialog__fields");
     fields.appendChild(auditField("Purpose", a.purpose));
+    fields.appendChild(auditField("Country", a.country));
     fields.appendChild(auditField("Location", a.location));
     fields.appendChild(auditField("Audit date", a.date));
     fields.appendChild(auditField("Scope", a.scope));
@@ -326,7 +363,9 @@
     wrap.innerHTML = "";
     const rows = [
       { k: "Email", v: C.contact.email, href: "mailto:" + C.contact.email },
-      { k: "Phone", v: C.contact.phone, href: "tel:" + C.contact.phone }
+      { k: "Phone", v: C.contact.phone, href: "tel:" + C.contact.phone },
+      { k: "Location", v: (C.profile.location || "Malaysia"), href: null },
+      { k: "Focus", v: C.profile.industry, href: null }
     ];
     if (C.assets && C.assets.resume) {
       rows.push({ k: "Résumé", v: "Download PDF", href: C.assets.resume, download: true });
@@ -334,12 +373,28 @@
     rows.forEach((r) => {
       const row = el("div", "contact__row");
       row.appendChild(el("span", "contact__k", esc(r.k)));
-      const a = el("a", "contact__v", esc(r.v));
-      a.href = r.href;
-      if (r.download) a.setAttribute("download", "");
-      row.appendChild(a);
+      if (r.href) {
+        const a = el("a", "contact__v", esc(r.v));
+        a.href = r.href;
+        if (r.download) a.setAttribute("download", "");
+        row.appendChild(a);
+      } else {
+        row.appendChild(el("span", "contact__v contact__v--static", esc(r.v)));
+      }
       wrap.appendChild(row);
     });
+
+    // Prominent action buttons
+    const actions = $("[data-role='contact-actions']");
+    if (actions) {
+      actions.innerHTML = "";
+      const emailBtn = el("a", "btn btn--primary", "Email me");
+      emailBtn.href = "mailto:" + C.contact.email;
+      const callBtn = el("a", "btn btn--ghost", "Call " + C.contact.phone);
+      callBtn.href = "tel:" + C.contact.phone;
+      actions.appendChild(emailBtn);
+      actions.appendChild(callBtn);
+    }
   }
 
   /* ---------- NAV ---------- */

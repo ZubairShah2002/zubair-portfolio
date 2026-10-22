@@ -119,6 +119,7 @@
   "audits": [
     {
       "company": "LSK Napure Latex Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_8924.jpeg",
       "location": "Lot 6122, Jalan Haji Abdul Manan, Off Jalan Meru, 41050 Klang, Selangor",
@@ -129,6 +130,7 @@
     },
     {
       "company": "Hin Trading Company Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_8976.jpeg",
       "location": "No. 30, Jalan Tiaj 2/6, Taman Industri Alam Jaya, 42300 Puncak Alam, Selangor, Malaysia",
@@ -139,6 +141,7 @@
     },
     {
       "company": "Multipack Industrial Supplies Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_9049.jpeg",
       "location": "5, Jalan Tiaj 2/7, Taman Industri Alam Jaya, 42300 Puncak Alam, Selangor, Malaysia",
@@ -149,6 +152,7 @@
     },
     {
       "company": "Maus Industries Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/a09b0b6e-b06b-4fb9-a7ba-f87321f2b6e3.jpeg",
       "location": "Lot 60, Batu 11, Jalan Cheras, 43000 Kuala Lumpur, 43000 Kajang, Selangor, Malaysia",
@@ -159,6 +163,7 @@
     },
     {
       "company": "Lian Ngoi Industry Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_9050.jpeg",
       "location": "Lot 4, Jalan Satu, Kawasan Perusahaan Balakong, Batu 11, Cheras, 43200, Cheras, Selangor, 43200, Malaysia",
@@ -169,6 +174,7 @@
     },
     {
       "company": "Sleep Matic Asia Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_9051.jpeg",
       "location": "No.8 & 9, Topaz Industrial Centre, Lot 2362, Kampung Baru Sungai Buloh, 40150 Shah Alam, Selangor, Malaysia",
@@ -179,6 +185,7 @@
     },
     {
       "company": "CHL Foam Industries Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_9052.jpeg",
       "location": "Lot 37174, AL51, Jalan Teratai 4, Kampung Baru Sungai Buloh, 40150 Shah Alam, Selangor, Malaysia",
@@ -189,6 +196,7 @@
     },
     {
       "company": "Kis Wire Sdn Bhd",
+      "country": "Malaysia",
       "purpose": "Quality Audit",
       "image": "assets/uploads/img_9053.jpeg",
       "location": "PLO475, Jalan Keluli 2, Kawasan Perindustrian Pasir Gudang, 81700 Pasir Gudang, Johor Darul Ta'zim, Malaysia",
@@ -196,6 +204,17 @@
       "scope": "Quality",
       "role": "Quality Audit",
       "status": "Audit Pending"
+    },
+    {
+      "company": "PT Ateja Tritunggal",
+      "country": "Indonesia",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "Indonesia",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
     }
   ],
   "projects": {
