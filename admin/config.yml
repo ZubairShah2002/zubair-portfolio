@@ -5,8 +5,8 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
-site_url: https://magnificent-kitten-72418f.netlify.app
-display_url: https://magnificent-kitten-72418f.netlify.app
+site_url: https://zubairshah.netlify.app
+display_url: https://zubairshah.netlify.app
 
 collections:
   - name: "portfolio"
