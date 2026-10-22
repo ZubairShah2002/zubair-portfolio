@@ -1,4 +1,95 @@
 {
+  "contact": {
+    "email": "zubairshah0095@gmail.com",
+    "phone": "0173242151"
+  },
+  "contributions": [
+    {
+      "ref": "A",
+      "title": "New Mattress Development",
+      "context": "Two new product development projects at Berex Tech.",
+      "involvement": "Involved in quality-related activities supporting the development of two new mattress products.",
+      "objective": "Support product quality considerations as new products move through development."
+    },
+    {
+      "ref": "B",
+      "title": "End-to-End Quality Control",
+      "context": "Quality is monitored at each stage of the manufacturing flow.",
+      "involvement": "Involved across incoming quality control, in-process quality control, outgoing inspection, and material and product testing.",
+      "objective": "Help ensure quality is observed and recorded at each manufacturing stage rather than at a single checkpoint."
+    },
+    {
+      "ref": "C",
+      "title": "Supplier Quality Coordination",
+      "context": "Raw material quality issues require direct communication with suppliers.",
+      "involvement": "Communicate with suppliers to clarify defects, raise quality concerns, and follow up on corrective actions where applicable.",
+      "objective": "Support clear, documented communication between the company and its suppliers on quality matters."
+    },
+    {
+      "ref": "D",
+      "title": "Non-Conformance Reporting",
+      "context": "Identified quality issues are recorded and communicated through NCRs.",
+      "involvement": "Involved in NCR documentation and follow-up for identified quality issues.",
+      "objective": "Record and communicate non-conformances accurately so they can be addressed and tracked."
+    },
+    {
+      "ref": "E",
+      "title": "Corrective & Preventive Actions",
+      "context": "Recurring or significant issues call for structured corrective and preventive action.",
+      "involvement": "Involved in CAPA-related activities supporting investigation, containment, resolution, and prevention.",
+      "objective": "Support actions that address the root of an issue and reduce the chance of recurrence."
+    },
+    {
+      "ref": "F",
+      "title": "8D Problem-Solving Reporting",
+      "context": "Structured problem-solving is documented through the 8D method.",
+      "involvement": "Involved in 8D reporting covering problem description, investigation, containment, corrective actions, and preventive measures.",
+      "objective": "Contribute to disciplined, documented problem-solving."
+    },
+    {
+      "ref": "G",
+      "title": "Work Instructions",
+      "context": "Consistent work practices depend on documented requirements.",
+      "involvement": "Involved in preparing or maintaining work instructions.",
+      "objective": "Support consistency through clear, documented work practices."
+    },
+    {
+      "ref": "H",
+      "title": "Defect Monitoring",
+      "context": "Accurate defect records support identification and follow-up.",
+      "involvement": "Involved in monitoring and documenting quality defects.",
+      "objective": "Maintain accurate defect records that support reporting and follow-up."
+    },
+    {
+      "ref": "I",
+      "title": "Supplier Quality Audit Participation",
+      "context": "Supplier quality is reviewed through audit activities.",
+      "involvement": "Involved in supplier quality audit activities. See the Supplier Quality Audit Experience section.",
+      "objective": "Participate in reviewing supplier quality."
+    },
+    {
+      "ref": "J",
+      "title": "Quality Records & Traceability",
+      "context": "Records support traceability of quality issues and materials.",
+      "involvement": "Involved in quality documentation and traceability where applicable, including records relating to quality issues, rejected materials, supplier communication, and corrective-action follow-up.",
+      "objective": "Maintain records that support traceability and follow-up."
+    },
+    {
+      "ref": "K",
+      "title": "Cross-Functional Quality Coordination",
+      "context": "Quality issues require clear communication across functions.",
+      "involvement": "Involved in coordinating quality-related communication with relevant production personnel and suppliers.",
+      "objective": "Communicate issues clearly and support timely follow-up."
+    }
+  ],
+  "assets": {
+    "portrait": "",
+    "resume": ""
+  },
+  "education": {
+    "note": "Education and certification records will be listed here once confirmed.",
+    "items": []
+  },
   "profile": {
     "name": "Zubair Shah",
     "title": "Internal Quality",
@@ -8,22 +99,127 @@
     "currentPeriod": "2025 – Present",
     "introduction": "Quality professional with experience across manufacturing, healthcare, and logistics operations. Currently involved in internal quality activities at Berex Tech (M) Sdn Bhd, with responsibilities spanning incoming material control, in-process quality monitoring, outgoing inspection, testing, supplier quality coordination, defect monitoring, and quality documentation.\n\nMy professional focus is on product quality, supplier coordination, non-conformance follow-up, traceability, and continuous improvement across manufacturing processes."
   },
-  "contact": {
-    "email": "zubairshah0095@gmail.com",
-    "phone": "0173242151"
-  },
-  "assets": {
-    "portrait": "",
-    "resume": ""
-  },
   "about": {
     "paragraphs": "My experience in quality began on the manufacturing floor as a Quality Inspector at Kossan Rubber Industries, where I worked within the inspection routines of a high-volume production environment.\n\nI continued in quality inspection at Mah Sing Healthcare Sdn Bhd, gaining exposure to the discipline that a healthcare manufacturing setting demands of its inspection and documentation practices.\n\nI then moved into a supervisory role at CJ Century Logistics, coordinating operations and people within a logistics environment — experience that broadened how I approach process, accountability, and day-to-day execution.\n\nToday, at Berex Tech (M) Sdn Bhd, I am involved in internal quality across the full production flow: incoming material control, in-process monitoring, outgoing inspection, and testing. This includes supplier quality coordination, defect monitoring, and quality documentation, alongside involvement in two new mattress development projects.",
     "facts": [
-      { "label": "Current focus", "value": "Internal Quality" },
-      { "label": "Industry", "value": "Manufacturing" },
-      { "label": "Based in", "value": "Malaysia" }
+      {
+        "label": "Current focus",
+        "value": "Internal Quality"
+      },
+      {
+        "label": "Industry",
+        "value": "Manufacturing"
+      },
+      {
+        "label": "Based in",
+        "value": "Malaysia"
+      }
     ]
   },
+  "audits": [
+    {
+      "company": "LSK Napure Latex Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "assets/uploads/img_8924.jpeg",
+      "location": "Lot 6122, Jalan Haji Abdul Manan, Off Jalan Meru, 41050 Klang, Selangor",
+      "date": "19 October 2026",
+      "scope": "",
+      "role": "Quality Audit",
+      "status": "Done Audit"
+    },
+    {
+      "company": "Hin Trading Company Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "Multipack Industrial Supplies Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "Maus Industries Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "Lian Ngoi Industry Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "Sleep Matic Asia Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "CHL Foam Industries Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    },
+    {
+      "company": "Kis Wire Sdn Bhd",
+      "purpose": "Quality Audit",
+      "image": "",
+      "location": "",
+      "date": "",
+      "scope": "",
+      "role": "",
+      "status": ""
+    }
+  ],
+  "projects": {
+    "intro": "This section is reserved for approved work samples and project documentation — new mattress development contributions, defect analysis, supplier rejection tracking, non-conformance documentation, and corrective-action follow-up. Materials are added here only once reviewed and cleared for sharing.",
+    "items": []
+  },
+  "competencies": [
+    {
+      "group": "Quality Control",
+      "skills": "Incoming Quality Control\nIn-Process Quality Control\nOutgoing Quality Inspection\nMaterial & Product Testing\nDefect Identification\nDefect Monitoring"
+    },
+    {
+      "group": "Supplier Quality",
+      "skills": "Supplier Quality Communication\nSupplier Quality Issue Follow-Up\nRaw Material Quality Issues\nSupplier Quality Audit Participation"
+    },
+    {
+      "group": "Quality Systems & Documentation",
+      "skills": "Non-Conformance Reporting (NCR)\nCorrective & Preventive Action (CAPA)\n8D Reporting\nWork Instructions\nQuality Documentation\nTraceability Support"
+    },
+    {
+      "group": "Manufacturing Quality Support",
+      "skills": "New Mattress Development Project Involvement\nProduction Quality Monitoring\nDefect Follow-Up\nCross-Functional Quality Coordination"
+    }
+  ],
   "career": [
     {
       "company": "Berex Tech (M) Sdn Bhd",
@@ -57,42 +253,5 @@
       "current": false,
       "responsibilities": "Quality inspection"
     }
-  ],
-  "contributions": [
-    { "ref": "A", "title": "New Mattress Development", "context": "Two new product development projects at Berex Tech.", "involvement": "Involved in quality-related activities supporting the development of two new mattress products.", "objective": "Support product quality considerations as new products move through development." },
-    { "ref": "B", "title": "End-to-End Quality Control", "context": "Quality is monitored at each stage of the manufacturing flow.", "involvement": "Involved across incoming quality control, in-process quality control, outgoing inspection, and material and product testing.", "objective": "Help ensure quality is observed and recorded at each manufacturing stage rather than at a single checkpoint." },
-    { "ref": "C", "title": "Supplier Quality Coordination", "context": "Raw material quality issues require direct communication with suppliers.", "involvement": "Communicate with suppliers to clarify defects, raise quality concerns, and follow up on corrective actions where applicable.", "objective": "Support clear, documented communication between the company and its suppliers on quality matters." },
-    { "ref": "D", "title": "Non-Conformance Reporting", "context": "Identified quality issues are recorded and communicated through NCRs.", "involvement": "Involved in NCR documentation and follow-up for identified quality issues.", "objective": "Record and communicate non-conformances accurately so they can be addressed and tracked." },
-    { "ref": "E", "title": "Corrective & Preventive Actions", "context": "Recurring or significant issues call for structured corrective and preventive action.", "involvement": "Involved in CAPA-related activities supporting investigation, containment, resolution, and prevention.", "objective": "Support actions that address the root of an issue and reduce the chance of recurrence." },
-    { "ref": "F", "title": "8D Problem-Solving Reporting", "context": "Structured problem-solving is documented through the 8D method.", "involvement": "Involved in 8D reporting covering problem description, investigation, containment, corrective actions, and preventive measures.", "objective": "Contribute to disciplined, documented problem-solving." },
-    { "ref": "G", "title": "Work Instructions", "context": "Consistent work practices depend on documented requirements.", "involvement": "Involved in preparing or maintaining work instructions.", "objective": "Support consistency through clear, documented work practices." },
-    { "ref": "H", "title": "Defect Monitoring", "context": "Accurate defect records support identification and follow-up.", "involvement": "Involved in monitoring and documenting quality defects.", "objective": "Maintain accurate defect records that support reporting and follow-up." },
-    { "ref": "I", "title": "Supplier Quality Audit Participation", "context": "Supplier quality is reviewed through audit activities.", "involvement": "Involved in supplier quality audit activities. See the Supplier Quality Audit Experience section.", "objective": "Participate in reviewing supplier quality." },
-    { "ref": "J", "title": "Quality Records & Traceability", "context": "Records support traceability of quality issues and materials.", "involvement": "Involved in quality documentation and traceability where applicable, including records relating to quality issues, rejected materials, supplier communication, and corrective-action follow-up.", "objective": "Maintain records that support traceability and follow-up." },
-    { "ref": "K", "title": "Cross-Functional Quality Coordination", "context": "Quality issues require clear communication across functions.", "involvement": "Involved in coordinating quality-related communication with relevant production personnel and suppliers.", "objective": "Communicate issues clearly and support timely follow-up." }
-  ],
-  "audits": [
-    { "company": "LSK Napure Latex Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Hin Trading Company Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Multipack Industrial Supplies Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Maus Industries Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Lian Ngoi Industry Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Sleep Matic Asia Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "CHL Foam Industries Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" },
-    { "company": "Kis Wire Sdn Bhd", "purpose": "Quality Audit", "image": "", "location": "", "date": "", "scope": "", "role": "", "status": "" }
-  ],
-  "competencies": [
-    { "group": "Quality Control", "skills": "Incoming Quality Control\nIn-Process Quality Control\nOutgoing Quality Inspection\nMaterial & Product Testing\nDefect Identification\nDefect Monitoring" },
-    { "group": "Supplier Quality", "skills": "Supplier Quality Communication\nSupplier Quality Issue Follow-Up\nRaw Material Quality Issues\nSupplier Quality Audit Participation" },
-    { "group": "Quality Systems & Documentation", "skills": "Non-Conformance Reporting (NCR)\nCorrective & Preventive Action (CAPA)\n8D Reporting\nWork Instructions\nQuality Documentation\nTraceability Support" },
-    { "group": "Manufacturing Quality Support", "skills": "New Mattress Development Project Involvement\nProduction Quality Monitoring\nDefect Follow-Up\nCross-Functional Quality Coordination" }
-  ],
-  "projects": {
-    "intro": "This section is reserved for approved work samples and project documentation — new mattress development contributions, defect analysis, supplier rejection tracking, non-conformance documentation, and corrective-action follow-up. Materials are added here only once reviewed and cleared for sharing.",
-    "items": []
-  },
-  "education": {
-    "note": "Education and certification records will be listed here once confirmed.",
-    "items": []
-  }
+  ]
 }
